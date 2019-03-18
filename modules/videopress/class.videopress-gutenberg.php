@@ -68,7 +68,7 @@ class VideoPress_Gutenberg {
 		) {
 			if ( Jetpack::is_module_active( 'videopress' ) ) {
 				return array( 'available' => true );
-			} elseif ( ! Jetpack::active_plan_supports( 'videopress' ) ) {
+			} elseif ( ! Jetpack_Plan::active_plan_supports( 'videopress' ) ) {
 				return array(
 					'available'          => false,
 					'unavailable_reason' => 'missing_plan',
